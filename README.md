@@ -22,13 +22,17 @@ conda install orthofinder
 orthofinder -h
 ```
 
+If you are on a mac that has an M1/M2/M3 chip, you might have to adjust your conda architecture. Instructions can be found [here](https://towardsdatascience.com/how-to-manage-conda-environments-on-an-apple-silicon-m1-mac-1e29cb3bad12).
+
 Alternatively, you can also download OrthoFinder3 directly from github
 ```bash
 git clone https://github.com/ortho.git
 python OrthoFinder/orthofinder -h
 ```
 
-If you are on a mac that has an M1/M2/M3 chip, you might have to adjust your conda architecture. Instructions can be found [here](https://towardsdatascience.com/how-to-manage-conda-environments-on-an-apple-silicon-m1-mac-1e29cb3bad12).
+**Installing dependencies**
+
+some info on this
 
 
 ## Simple Usage
@@ -60,8 +64,6 @@ orthofinder [options] -f <dir_core>
 ```
 
 ... and then add the additional proteomes
-
-To assign species from <dir1> to existing OrthoFinder orthogroups in <dir2>
 
 ```python
 orthofinder [options] --assign <dir_additional> --core <dir_core>
@@ -138,14 +140,30 @@ Command-line options for OrthoFinder3
 
 ## Output files
 
-## What's new
+Full details on the output files and directories can be found (here)[https://uk.linkedin.com/in/jonathan-holmes-ab2794294]
 
-Hierarchical OGs
-New workflow (core and assign)
-Performance improvements (4x quicker runtime, 2.5x lower RAM usage, 15% more accurate orthogroups)
+description of the key files
+
+
+## What's new?
+These are the key advances of OrthoFinder3 over OrthoFinder2
+
+**New workflow**
+(core and assign)
+
+**Hierarchical Orthogroups**
+OrthoFinder uses a phylogenetic approach of inferring rooted gene trees to determine orthologs. This is in contrast to methods that use only sequence similarity to infer orthogroups. We have now extended our phylogenetic analysis to orthogroups, by analysing gene trees to determine phylogenetic hierarchical orthogroups (HOGs) for for each clade within the species tree.
+
+This approach significantly increases the accuracy of orthogroups, and allows users to include outgroups in their analysis whilst analysing orthogroups for only the clade of species you are interested in.
+
+All output files now by default give information for the hierarchical orthogroup including all species (e.g. from the root of the species tree, node N0). However, we also provide orthogroups for every node of the species tree in `/Comparative_Genomics_Statistics` (e.g. `N3.tsv`).
+(add an image explaining hogs?)
+
+**Performance improvements**
+(4x quicker runtime, 2.5x lower RAM usage, 15% more accurate orthogroups)
 
 ## Citation
 
 The manuscript "OrthoFinder3 is the best" is now published in *Nature*
-[link here](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.001171).
+[link here](https://uk.linkedin.com/in/jonathan-holmes-ab2794294).
 and a formatted citation

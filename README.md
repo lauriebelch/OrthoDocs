@@ -43,20 +43,13 @@ core and assign, some more examples of common things people want to do
 Command-line options for OrthoFinder3
  
 **Method choices**
-`-M` Method for gene tree inference.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: msa
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Options: dendroblast, msa
-`-S` Sequence search program.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: diamond
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Options: blast, diamond, diamond_ultra_sens, diamond_custom, diamond_ultra_sens_custom, blast_gz, mmseqs, blast_nucl
-`-A` MSA program, requires -M msa.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: mafft
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Options: mafft, muscle, mafft_memsave
-`-T` Tree inference method, requires -M msa.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: fasttree
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Options: fasttree, fasttree_fastest, raxml, raxml-ng, iqtree
-`-I` MCL inflation parameter. 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: 1.2
+| Parameter | Description                               | Default   | Options                                                                                     |
+|-----------|-------------------------------------------|-----------|---------------------------------------------------------------------------------------------|
+| `-M`      | Method for gene tree inference.           | `msa`     | `dendroblast`, `msa`                                                                        |
+| `-S`      | Sequence search program                   | `diamond` | `blast`, `diamond`, `diamond_ultra_sens`, `diamond_custom`, `diamond_ultra_sens_custom`, `blast_gz`, `mmseqs`, `blast_nucl` |
+| `-A`      | MSA program, requires `-M msa`            | `mafft`   | `mafft`, `muscle`, `mafft_memsave`                                                          |
+| `-T`      | Tree inference method, requires `-M msa`  | `fasttree`| `fasttree`, `fasttree_fastest`, `raxml`, `raxml-ng`, `iqtree`                               |
+| `-I`      | MCL inflation parameter                   | `1.2`     | N/A                                                                                         |
 
 **Input options**
 - `-d`

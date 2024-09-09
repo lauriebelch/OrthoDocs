@@ -49,6 +49,8 @@ For information on formatting input files, see [here](https://www.linkedin.com/i
 
 OrthoFinder3 provides a new workflow to assign new genes from new species to an already inferred set of orthogroups for a smaller, core group of species. 
 
+![OrthoFinder3 workflow](of3.png)
+
 We provide a script ``core_maker.py`` to automatically pick a good set of phylogenetically diverse core proteomes from a directory. For more details on how our method works, see [here](https://www.linkedin.com/in/jonathan-holmes-ab2794294/?originalSubdomain=uk)
 
 ```python

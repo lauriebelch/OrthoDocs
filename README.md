@@ -42,6 +42,7 @@ core and assign, some more examples of common things people want to do
 ## Options
 
 Command-line options for OrthoFinder3
+
 **Adding additional species**
 | Parameter | Description                               |
 |-----------|-------------------------------------------|
@@ -65,7 +66,7 @@ Command-line options for OrthoFinder3
 **Output options**
 | Parameter | Description                                                                 |
 |-----------|-----------------------------------------------------------------------------|
-| `-x ,<file>`      | Info for outputting results in OrthoXML format.                             |
+| `-x <file>`      | Info for outputting results in OrthoXML format.                             |
 | `-p <dir>`      | Write the temporary pickle files to `<dir>`.                                |
 | `-X`      | Don’t add species names to sequence IDs.                                    |
 | `-n <txt>`      | Name to append to the results directory.                                    |

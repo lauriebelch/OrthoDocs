@@ -10,7 +10,7 @@ OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and a
 - [Advanced Usage](#Advanced-Usage)
 - [Command line Options](#Command-line-Options)
 - [Output files](#Output-files)
-- [What's New?](#What's-new)
+- [What's New?](#What-is-new)
 - [Citation](#Citation)
 
 Full documentation including tutorials is available on our [github.io](https://davidemms.github.io/)
@@ -188,7 +188,7 @@ Full details on the output files and directories can be found [here](https://uk.
 - A FASTA file for each orthogroup giving the amino acid sequences for each gene in the orthogroup.
 
 
-## What's new?
+## What is new?
 OrthoFinder3 has several major changes comapred to OrthoFinder2
 
 **New workflow**

@@ -1,4 +1,4 @@
-**OrthoFinder3**
+# OrthoFinder3
 
 ![OrthoFinder workflow](of2.png)
 

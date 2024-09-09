@@ -8,7 +8,7 @@ OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and a
 - [Installation](#Installation)
 - [Simple Usage](#Simple-Usage)
 - [Advanced Usage](#Advanced-Usage)
-- [Command line Options](#Options)
+- [Command line Options](#Command-line-Options)
 - [Output files](#Output-files)
 - [What's New?](#What's-new)
 
@@ -73,7 +73,7 @@ orthofinder [options] --assign <dir_additional> --core <dir_core>
 
 (Maybe some more commands for things that people commonly want to do?)
 
-## Options
+## Command-line options
 
 Command-line options for OrthoFinder3
 
@@ -142,14 +142,14 @@ Command-line options for OrthoFinder3
 
 ## Output files
 
-Full details on the output files and directories can be found [here][https://uk.linkedin.com/in/jonathan-holmes-ab2794294]
+Full details on the output files and directories can be found [here](https://uk.linkedin.com/in/jonathan-holmes-ab2794294)
 
 A standard OrthoFinder run produces a set of files describing the orthogroups, orthologs, gene trees, resolve gene trees, the rooted species tree, gene duplication events and comparative genomic statistics for the set of species being analysed. These files are located in an intuitive directory structure.
 
 The most useful files and folders for most users are
 
 ```/Phylogenetic_Hierarchical_Orthogroups```
-- Each file is a phylogenetic [hierarchical](#Hierararchical-Orthogroups) orthogroup (HOG) for a different node of the species tree
+- Each file is a phylogenetic hierarchical orthogroup (HOG) for a different node of the species tree
 - Each row of a file contain the genes belonging to a single orthogroup
 - Each species is represented by a single column
 
@@ -180,7 +180,7 @@ These are the key advances of OrthoFinder3 over OrthoFinder2
 
 (core and assign)
 
-**Hierarchical Orthogroups**
+**Phylogenetic Hierarchical Orthogroups**
 
 OrthoFinder uses a phylogenetic approach of inferring rooted gene trees to determine orthologs. This is in contrast to methods that use only sequence similarity to infer orthogroups. We have now extended our phylogenetic analysis to orthogroups, by analysing gene trees to determine phylogenetic hierarchical orthogroups (HOGs) for for each clade within the species tree.
 

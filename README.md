@@ -191,7 +191,7 @@ Full details on the output files and directories can be found [here](https://uk.
 ## What is new?
 OrthoFinder3 has several major changes comapred to OrthoFinder2
 
-**New workflow**
+**New scalable workflow**
 
 OrthoFinder3 provides the ``--core --assign`` workflow to assign new genes from new species to an already inferred set of orthogroups for a smaller, core group of species. SHOOT is used to create profiles for core orthogroups, and new genes are assigned to these orthogroups without requiring a costly all-versus-all sequence search. Unassigned genes, in new species clades corresponding to orthogroups that arose more recently than the divergence of the core species are analysed on a clade-by-clade basis. The resulting gene trees are then analysed using the standard workflow to infer the same phylogenetically determined data as for the standard workflow.
 

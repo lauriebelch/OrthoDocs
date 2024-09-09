@@ -2,7 +2,7 @@
 
 ![OrthoFinder workflow](of2.png)
 
-OrthoFinder is a fast, accurate, and comprehensice platform for comparative genomics. OrthoFinder finds orthologs and orthogroups from all genes in a group of species, using a phylogenetic approach. 
+OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and analyzes these gene trees to identify the rooted species tree. The method subsequently identifies all gene duplication events in the complete set of gene trees, and analyzes this information in the context of the species tree to provide both gene tree and species tree-level analysis of gene duplication events. OrthoFinder further analyzes all of this phylogenetic information to identify the complete set of orthologs between all species and provide extensive comparative genomics statistics.
 
 ## Table of contents
 - [Installation](#Installation)
@@ -33,11 +33,41 @@ If you are on a mac that has an M1/M2/M3 chip, you might have to adjust your con
 
 ## Simple Usage
 
-Files you need, some example lines of code with common options
+Run OrthoFinder3 on FASTA format proteomes in `<dir>`
+
+```python
+orthofinder [options] -f <dir>
+```
+
+For information on formatting input files, see [here](https://www.linkedin.com/in/jonathan-holmes-ab2794294/?originalSubdomain=uk)
 
 ## Advanced Usage
 
-core and assign, some more examples of common things people want to do
+OrthoFinder3 provides a new workflow to assign new genes from new species to an already inferred set of orthogroups for a smaller, core group of species. 
+
+We provide a script ``core_maker.py`` to automatically pick a good set of phylogenetically diverse core proteomes from a directory. For more details on how our method works, see [here](https://www.linkedin.com/in/jonathan-holmes-ab2794294/?originalSubdomain=uk)
+
+```python
+python core_maker.py -f <dir1> -o <prefix>
+```
+
+This script will output a folder `<prefix>_core` with the core proteomes, and a folder `<prefix>_additional`  with the additional proteomes
+
+You can then run OrthoFinder3 on the core proteomes
+
+```python
+orthofinder [options] -f <dir_core>
+```
+
+... and then add the additional proteomes
+
+To assign species from <dir1> to existing OrthoFinder orthogroups in <dir2>
+
+```python
+orthofinder [options] --assign <dir_additional> --core <dir_core>
+```
+
+(Maybe some more commands for things that people commonly want to do?)
 
 ## Options
 
@@ -112,6 +142,7 @@ Command-line options for OrthoFinder3
 
 Hierarchical OGs
 New workflow (core and assign)
+Performance improvements (4x quicker runtime, 2.5x lower RAM usage, 15% more accurate orthogroups)
 
 ## Citation
 

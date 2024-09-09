@@ -11,6 +11,7 @@ OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and a
 - [Command line Options](#Command-line-Options)
 - [Output files](#Output-files)
 - [What's New?](#What's-new)
+- [Citation](#Citation)
 
 Full documentation including tutorials is available on our [github.io](https://davidemms.github.io/)
 
@@ -30,12 +31,16 @@ git clone https://github.com/ortho.git
 python OrthoFinder/orthofinder -h
 ```
 
+A docker image is also available [here](https://www.linkedin.com/in/jonathan-holmes-ab2794294/?originalSubdomain=uk)
+
 **Installing dependencies**
 
-some info on how to do this
+some info on how to do manually install dependencies if you want
 
 
 ## Simple Usage
+
+OrthoFinder3 requires one fasta file for each species, containing the amino acid sequences for each gene.
 
 Run OrthoFinder3 on FASTA format proteomes in `<dir>`
 
@@ -98,8 +103,8 @@ Command-line options for OrthoFinder3
 | `-s`      | User-specified rooted species tree.        |
 
 **Output options**
-| Parameter | Description                                                                 |
-|-----------|-----------------------------------------------------------------------------|
+| Parameter   | Description                                                                 |
+|-----------  |-----------------------------------------------------------------------------|
 | `-x <file>`      | Info for outputting results in OrthoXML format.                             |
 | `-p <dir>`      | Write the temporary pickle files to `<dir>`.                                |
 | `-X`      | Don’t add species names to sequence IDs.                                    |
@@ -199,4 +204,18 @@ All output files now by default give information for the hierarchical orthogroup
 The manuscript "OrthoFinder3 is the best" is now published in *Nature*
 [link here](https://uk.linkedin.com/in/jonathan-holmes-ab2794294).
 
-and a formatted citation
+[Emms & Kelly (2015)](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0721-2]) introduced the orthogroup inference method.
+
+[Emms & Kelly (2019)](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y) introduced the phylogenetic inference of orthologs, including rooted gene and species trees, and gene duplication events.
+
+[Emms & Kelly (2017)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5850722/) introduced the STRIDE method to root an unrooted species tree.
+
+[Emms & Kelly (2017)](https://www.biorxiv.org/content/10.1101/267914v1) introduced the STAG method of species tree inference.
+
+## Meet the team
+
+Current members of the OrthoFinder team:
+
+OrthoYi, OrthoJohnnie, OrthoLaurie
+
+

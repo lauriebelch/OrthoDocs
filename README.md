@@ -42,7 +42,11 @@ core and assign, some more examples of common things people want to do
 ## Options
 
 Command-line options for OrthoFinder3
- 
+**Adding additional species**
+| Parameter | Description                               |
+|-----------|-------------------------------------------|
+| `--assign <dir1> --core <dir2>`      | Assign species from `<dir1>` to existing orthogroups in `<dir2>`.                   |
+
 **Method choices**
 | Parameter | Description                               | Default   | Options                                                                                     |
 |-----------|-------------------------------------------|-----------|---------------------------------------------------------------------------------------------|
@@ -61,18 +65,18 @@ Command-line options for OrthoFinder3
 **Output options**
 | Parameter | Description                                                                 |
 |-----------|-----------------------------------------------------------------------------|
-| `-x`      | Info for outputting results in OrthoXML format.                             |
-| `-p`      | Write the temporary pickle files to `<dir>`.                                |
+| `-x ,<file>`      | Info for outputting results in OrthoXML format.                             |
+| `-p <dir>`      | Write the temporary pickle files to `<dir>`.                                |
 | `-X`      | Don’t add species names to sequence IDs.                                    |
-| `-n`      | Name to append to the results directory.                                    |
-| `-o`      | Specify a non-default results directory.                                    |
+| `-n <txt>`      | Name to append to the results directory.                                    |
+| `-o <txt>`      | Specify a non-default results directory.                                    |
 | `-efn`    | Extend the output directory name with the name of the scoring matrix, gap penalties, search program, MSA program, and tree program. |
 
-**Parallel processing options **
+**Parallel processing options**
 | Parameter | Description                                 | Default |
 |-----------|---------------------------------------------|---------|
 | `-t`      | Number of parallel sequence search threads. | `11`    |
-| `-a`      | Number of parallel analysis threads.        | N/A     |
+| `-a`      | Number of parallel analysis threads.        | `1`     |
 
 **Workflow stopping options**
 | Parameter | Description                                                                 |

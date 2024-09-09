@@ -6,8 +6,8 @@ OrthoFinder is a fast, accurate, and comprehensice platform for comparative geno
 
 ## Table of contents
 - [Installation](#Installation)
-- [Simple Usage](#SimpleUsage)
-- [Advanced Usage](#AdvancedUsage)
+- [Simple Usage](#Simple Usage)
+- [Advanced Usage](#Advanced Usage)
 - [Input Options](#Options)
 - [Tutorials](link to github.io page?)
 

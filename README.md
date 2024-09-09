@@ -12,7 +12,7 @@ OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and a
 - [Output files](#Output-files)
 - [What's New?](#What's-new)
 
-More detailed tutorials are available [here](https://davidemms.github.io/)
+Full documentation including tutorials is available on our [github.io](https://davidemms.github.io/)
 
 ## Installation
 
@@ -32,7 +32,7 @@ python OrthoFinder/orthofinder -h
 
 **Installing dependencies**
 
-some info on this
+some info on how to do this
 
 
 ## Simple Usage
@@ -140,30 +140,61 @@ Command-line options for OrthoFinder3
 
 ## Output files
 
-Full details on the output files and directories can be found (here)[https://uk.linkedin.com/in/jonathan-holmes-ab2794294]
+Full details on the output files and directories can be found [here][https://uk.linkedin.com/in/jonathan-holmes-ab2794294]
 
-description of the key files
+A standard OrthoFinder run produces a set of files describing the orthogroups, orthologs, gene trees, resolve gene trees, the rooted species tree, gene duplication events and comparative genomic statistics for the set of species being analysed. These files are located in an intuitive directory structure.
 
+The most useful files and folders for most users are
+
+```/Phylogenetic_Hierarchical_Orthogroups```
+- Each file is a phylogenetic [hierarchical](#Hierararchical-Orthogroups) orthogroup (HOG) for a different node of the species tree
+- Each row of a file contain the genes belonging to a single orthogroup
+- Each species is represented by a single column
+
+```/Orthologues```
+- Each species has a sub-directory that in turn contains a file for each pairwise species comparison, listing the orthologs between that species pair.
+
+```/Comparative_Genomics_Statistics```
+- Files containing summary statistics across all orthogroups, as well as comparisons between each pair of species
+
+```/Resolved_Gene_Trees```
+- A rooted phylogenetic tree inferred for each orthogroup with 4 or more sequences and resolved using the OrthoFinder hybrid species-overlap/duplication-loss coalescent model.
+
+```/Species_Tree```
+- SpeciesTree_rooted.txt = A STAG species tree inferred from all orthogroups, containing STAG support values at internal nodes and rooted using STRIDE.
+- SpeciesTree_rooted_node_labels.txt = The same tree, but with nodes labels instead of support values (useful to map gene duplication events)
+
+```/Gene_Duplication_Events```
+- `Duplications.tsv` has a row for each duplication, with information on orthogroup, species, node, and support.
+- `SpeciesTree_Gene_Duplications_0.5_Support.txt` provides a summation of the above duplications over the branches of the species tree.
+
+```/Orthogroup_Sequences```
+- A FASTA file for each orthogroup giving the amino acid sequences for each gene in the orthogroup.
 
 ## What's new?
 These are the key advances of OrthoFinder3 over OrthoFinder2
 
 **New workflow**
+
 (core and assign)
 
 **Hierarchical Orthogroups**
+
 OrthoFinder uses a phylogenetic approach of inferring rooted gene trees to determine orthologs. This is in contrast to methods that use only sequence similarity to infer orthogroups. We have now extended our phylogenetic analysis to orthogroups, by analysing gene trees to determine phylogenetic hierarchical orthogroups (HOGs) for for each clade within the species tree.
 
 This approach significantly increases the accuracy of orthogroups, and allows users to include outgroups in their analysis whilst analysing orthogroups for only the clade of species you are interested in.
 
 All output files now by default give information for the hierarchical orthogroup including all species (e.g. from the root of the species tree, node N0). However, we also provide orthogroups for every node of the species tree in `/Comparative_Genomics_Statistics` (e.g. `N3.tsv`).
-(add an image explaining hogs?)
+
+![HOGs](hog.png)
 
 **Performance improvements**
+
 (4x quicker runtime, 2.5x lower RAM usage, 15% more accurate orthogroups)
 
 ## Citation
 
 The manuscript "OrthoFinder3 is the best" is now published in *Nature*
 [link here](https://uk.linkedin.com/in/jonathan-holmes-ab2794294).
+
 and a formatted citation

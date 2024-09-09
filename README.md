@@ -43,24 +43,20 @@ core and assign, some more examples of common things people want to do
 Command-line options for OrthoFinder3
  
 **Method choices**
-<br /> 
 `-M` Method for gene tree inference.
-  - Default: msa
-  - Options: dendroblast, msa
-- `-S`
-  -	Sequence search program.
-  -	Default: diamond
-  -	Options: blast, diamond, diamond_ultra_sens, diamond_custom, diamond_ultra_sens_custom, blast_gz, mmseqs, blast_nucl
--	`-A`
-  -	MSA program, requires -M msa.
-  -	Default: mafft
-  -	Options: mafft, muscle, mafft_memsave
--	`-T`
-  -	Tree inference method, requires -M msa.
-  -	Default: fasttree
-  -	Options: fasttree, fasttree_fastest, raxml, raxml-ng, iqtree
--	`-I`
-  -	MCL inflation parameter. Default: 1.2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: msa
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Options: dendroblast, msa
+`-S` Sequence search program.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: diamond
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Options: blast, diamond, diamond_ultra_sens, diamond_custom, diamond_ultra_sens_custom, blast_gz, mmseqs, blast_nucl
+`-A` MSA program, requires -M msa.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: mafft
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Options: mafft, muscle, mafft_memsave
+`-T` Tree inference method, requires -M msa.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: fasttree
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Options: fasttree, fasttree_fastest, raxml, raxml-ng, iqtree
+`-I` MCL inflation parameter. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: 1.2
 
 **Input options**
 - `-d`

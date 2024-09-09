@@ -15,6 +15,7 @@ OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and a
 
 Full documentation including tutorials is available on our [github.io](https://davidemms.github.io/)
 
+
 ## Installation
 
 The easiest way to install OrthoFinder3 is using [conda](https://www.machinelearningplus.com/deployment/conda-create-environment-and-everything-you-need-to-know-to-manage-conda-virtual-environment/).
@@ -42,13 +43,19 @@ some info on how to do manually install dependencies if you want
 
 OrthoFinder3 requires one fasta file for each species, containing the amino acid sequences for each gene.
 
-Run OrthoFinder3 on FASTA format proteomes in `<dir>`
+Ideally you want to use a single transcript variant per gene.
+We provide a script `primary_transcripts.py` to extract the longest variant per gene;
 
-```python
-orthofinder [options] -f <dir>
+```bash
+for f in *fa ; do python primary_transcript.py $f ; done
 ```
 
-For information on formatting input files, see [here](https://www.linkedin.com/in/jonathan-holmes-ab2794294/?originalSubdomain=uk)
+Run OrthoFinder2 on FASTA format proteomes in `<dir>`
+
+```python
+orthofinder [options] -f <dir> -M dendroblast
+```
+
 
 ## Advanced Usage
 
@@ -76,7 +83,10 @@ orthofinder [options] -f <dir_core>
 orthofinder [options] --assign <dir_additional> --core <dir_core>
 ```
 
+**Note that this workflow requires multiple sequence alignment, so you can't add to OrthoFinder2 results that were run with the default `-M dendroblast`**
+
 (Maybe some more commands for things that people commonly want to do?)
+
 
 ## Command-line options
 
@@ -94,7 +104,7 @@ Command-line options for OrthoFinder3
 | `-S`      | Sequence search program                   | `diamond` | `blast`, `diamond`, `diamond_ultra_sens`, `diamond_custom`, `diamond_ultra_sens_custom`, `blast_gz`, `mmseqs`, `blast_nucl` |
 | `-A`      | MSA program, requires `-M msa`            | `mafft`   | `mafft`, `muscle`, `mafft_memsave`                                                          |
 | `-T`      | Tree inference method, requires `-M msa`  | `fasttree`| `fasttree`, `fasttree_fastest`, `raxml`, `raxml-ng`, `iqtree`                               |
-| `-I`      | MCL inflation parameter                   | `1.2`     | N/A                                                                                         |
+| `-I`      | MCL inflation parameter                   | `1.2`     | `1-10`                                                                                         |
 
 **Input options**
 | Parameter | Description                               |
@@ -145,13 +155,12 @@ Command-line options for OrthoFinder3
 | `-y`             | Split paralogous clades below the root of a HOG into separate HOGs.        |
 | `-h`             | Print this help text.                                                     |
 
-## Output files
 
-Full details on the output files and directories can be found [here](https://uk.linkedin.com/in/jonathan-holmes-ab2794294)
+## Output files
 
 A standard OrthoFinder run produces a set of files describing the orthogroups, orthologs, gene trees, resolve gene trees, the rooted species tree, gene duplication events and comparative genomic statistics for the set of species being analysed. These files are located in an intuitive directory structure.
 
-The most useful files and folders for most users are
+Full details on the output files and directories can be found [here](https://uk.linkedin.com/in/jonathan-holmes-ab2794294). The directories that are useful for most users are;
 
 ```/Phylogenetic_Hierarchical_Orthogroups```
 - Each file is a phylogenetic hierarchical orthogroup (HOG) for a different node of the species tree
@@ -178,16 +187,17 @@ The most useful files and folders for most users are
 ```/Orthogroup_Sequences```
 - A FASTA file for each orthogroup giving the amino acid sequences for each gene in the orthogroup.
 
+
 ## What's new?
-These are the key advances of OrthoFinder3 over OrthoFinder2
+OrthoFinder3 has several major changes comapred to OrthoFinder2
 
 **New workflow**
 
-(core and assign)
+OrthoFinder3 provides the ``--core --assign`` workflow to assign new genes from new species to an already inferred set of orthogroups for a smaller, core group of species. SHOOT is used to create profiles for core orthogroups, and new genes are assigned to these orthogroups without requiring a costly all-versus-all sequence search. Unassigned genes, in new species clades corresponding to orthogroups that arose more recently than the divergence of the core species are analysed on a clade-by-clade basis. The resulting gene trees are then analysed using the standard workflow to infer the same phylogenetically determined data as for the standard workflow.
 
 **Phylogenetic Hierarchical Orthogroups**
 
-OrthoFinder uses a phylogenetic approach of inferring rooted gene trees to determine orthologs. This is in contrast to methods that use only sequence similarity to infer orthogroups. We have now extended our phylogenetic analysis to orthogroups, by analysing gene trees to determine phylogenetic hierarchical orthogroups (HOGs) for for each clade within the species tree.
+OrthoFinder3 uses a phylogenetic approach of inferring rooted gene trees to determine orthologs. This is in contrast to methods that use only sequence similarity to infer orthogroups. We have now extended our phylogenetic analysis to orthogroups, by analysing gene trees to determine phylogenetic hierarchical orthogroups (HOGs) for for each clade within the species tree.
 
 This approach significantly increases the accuracy of orthogroups, and allows users to include outgroups in their analysis whilst analysing orthogroups for only the clade of species you are interested in.
 
@@ -198,6 +208,15 @@ All output files now by default give information for the hierarchical orthogroup
 **Performance improvements**
 
 (4x quicker runtime, 2.5x lower RAM usage, 15% more accurate orthogroups)
+
+**New Benchmarking**
+
+We have also updated the bespoke artisan benchmarking script from [OrthoBench](https://github.com/davidemms/Open_Orthobench) to allow for better comparison between methods.
+
+**Data Visualization**
+
+We also provide an [R shiny](https://www.rstudio.com/products/shiny/) interactive app that users can use to extract information from OrthoFinder3 results. Users can enter a gene ID and get information on its orthologs and duplications, and view the gene tree
+![OrthoFinder workflow](shiny.png)
 
 ## Citation
 

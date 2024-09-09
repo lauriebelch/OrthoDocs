@@ -1,13 +1,13 @@
 **OrthoFinder3**
 
-image
+![OrthoFinder workflow](of2.png)
 
 OrthoFinder is a fast, accurate, and comprehensice platform for comparative genomics. OrthoFinder finds orthologs and orthogroups from all genes in a group of species, using a phylogenetic approach. 
 
 ## Table of contents
 - [Installation](#Installation)
-- [Simple Usage](#Simple Usage)
-- [Advanced Usage](#Advanced Usage)
+- [Simple Usage](#Simple-Usage)
+- [Advanced Usage](#Advanced-Usage)
 - [Input Options](#Options)
 - [Tutorials](link to github.io page?)
 

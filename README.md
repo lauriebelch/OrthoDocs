@@ -8,7 +8,8 @@ OrthoFinder is a fast, accurate, and comprehensice platform for comparative geno
 - [Installation](#Installation)
 - [Simple Usage](#Simple-Usage)
 - [Advanced Usage](#Advanced-Usage)
-- [Input Options](#Options)
+- [Command line Options](#Options)
+- [Output files](#Output-files)
 - [What's New?](#What's-new)
 
 More detailed tutorials are available [here](https://davidemms.github.io/)
@@ -52,66 +53,55 @@ Command-line options for OrthoFinder3
 | `-I`      | MCL inflation parameter                   | `1.2`     | N/A                                                                                         |
 
 **Input options**
-- `-d`
-  -	Input is DNA sequences.
--	`-s`
-  -	User-specified rooted species tree.
+| Parameter | Description                               |
+|-----------|-------------------------------------------|
+| `-d`      | Input is DNA sequences.                   |
+| `-s`      | User-specified rooted species tree.        |
 
 **Output options**
--	`-x`
-  -	Info for outputting results in OrthoXML format.
--	`-p`
-  -	Write the temporary pickle files to <dir>.
--	`-X`
-  -	Don’t add species names to sequence IDs.
--	`-n`
-  -	Name to append to the results directory.
--	`-o`
-  -	Specify a non-default results directory.
--	`-efn`
-  -	Extend the output directory name with the name of the scoring matrix, gap penalties, search program, MSA program, and tree program.
+| Parameter | Description                                                                 |
+|-----------|-----------------------------------------------------------------------------|
+| `-x`      | Info for outputting results in OrthoXML format.                             |
+| `-p`      | Write the temporary pickle files to `<dir>`.                                |
+| `-X`      | Don’t add species names to sequence IDs.                                    |
+| `-n`      | Name to append to the results directory.                                    |
+| `-o`      | Specify a non-default results directory.                                    |
+| `-efn`    | Extend the output directory name with the name of the scoring matrix, gap penalties, search program, MSA program, and tree program. |
 
-**Parallel processing options**
-- `-t`
-  - Number of parallel sequence search threads. Default: 11    
-- `-a`
-  - Number of parallel analysis threads.
+**Parallel processing options **
+| Parameter | Description                                 | Default |
+|-----------|---------------------------------------------|---------|
+| `-t`      | Number of parallel sequence search threads. | `11`    |
+| `-a`      | Number of parallel analysis threads.        | N/A     |
 
-**Workflow Stopping Options**
--	`-op`
-  -	Stop after preparing input files for BLAST.
--	`-og`
-  -	Stop after inferring orthogroups.
-- `-os`
-  -	Stop after writing sequence files for orthogroups (requires -M msa).
--	`-oa`
-  -	Stop after inferring alignments for orthogroups (requires -M msa).
--	`-ot`
-  -	Stop after inferring gene trees for orthogroups.
+**Workflow stopping options**
+| Parameter | Description                                                                 |
+|-----------|-----------------------------------------------------------------------------|
+| `-op`     | Stop after preparing input files for BLAST.                                 |
+| `-og`     | Stop after inferring orthogroups.                                           |
+| `-os`     | Stop after writing sequence files for orthogroups (requires `-M msa`).      |
+| `-oa`     | Stop after inferring alignments for orthogroups (requires `-M msa`).        |
+| `-ot`     | Stop after inferring gene trees for orthogroups.                            |
 
-**Workflow Restart Commands**
--	`-b` <dir>
-  -	Start OrthoFinder from pre-computed BLAST results in <dir>.
--	`-fg` <dir>
-  -	Start OrthoFinder from pre-computed orthogroups in <dir>.
--	`-ft` <dir>
-  -	Start OrthoFinder from pre-computed gene trees in <dir>.
+**Workflow restart options**
+| Parameter  | Description                                                  |
+|------------|--------------------------------------------------------------|
+| `-b <dir>` | Start OrthoFinder from pre-computed BLAST results in `<dir>`. |
+| `-fg <dir>`| Start OrthoFinder from pre-computed orthogroups in `<dir>`.   |
+| `-ft <dir>`| Start OrthoFinder from pre-computed gene trees in `<dir>`.    |
 
 **Other options**
--	`-1`
-  -	Only perform one-way sequence search.
--	`--matrix`
-  -	Scoring matrix allowed by DIAMOND.
--	`--custom-matrix`
-  -	Custom scoring matrix.
--	`-z`
-  -	Don’t trim MSAs (columns >= 90% gap, min. alignment length 500).
-- `--save-space`
-  -	Only create one compressed orthologs file per species.
--	`-y`
-  -	Split paralogous clades below the root of a HOG into separate HOGs.
--	`-h`
-  -	Print this help text.
+| Parameter        | Description                                                               |
+|------------------|---------------------------------------------------------------------------|
+| `-1`             | Only perform one-way sequence search.                                     |
+| `--matrix`       | Scoring matrix allowed by DIAMOND.                                        |
+| `--custom-matrix`| Custom scoring matrix.                                                    |
+| `-z`             | Don’t trim MSAs (columns >= 90% gap, min. alignment length 500).          |
+| `--save-space`   | Only create one compressed orthologs file per species.                    |
+| `-y`             | Split paralogous clades below the root of a HOG into separate HOGs.        |
+| `-h`             | Print this help text.                                                     |
+
+## Output files
 
 ## What's new
 

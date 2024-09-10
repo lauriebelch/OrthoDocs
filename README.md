@@ -13,8 +13,9 @@ OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and a
 - [What's New?](#What-is-new)
 - [Citation](#Citation)
 
-Full documentation including tutorials is available on our [github.io](https://davidemms.github.io/)
+Tutorials and further documentation can be found on our [github.io](https://davidemms.github.io/)
 
+A single PDF with all documentation, tutorials, and this README is available [here](http://www.iqtree.org/doc/iqtree-doc.pdf)
 
 ## Installation
 
@@ -154,6 +155,7 @@ Command-line options for OrthoFinder3
 | `--save-space`   | Only create one compressed orthologs file per species.                    |
 | `-y`             | Split paralogous clades below the root of a HOG into separate HOGs.        |
 | `-h`             | Print this help text.                                                     |
+| `-v`             | Print version.                                                     |
 
 
 ## Output files
@@ -191,7 +193,7 @@ Full details on the output files and directories can be found [here](https://uk.
 ## What is new?
 OrthoFinder3 has several major changes comapred to OrthoFinder2
 
-**New scalable workflow**
+**New workflow for scalability**
 
 OrthoFinder3 provides the ``--core --assign`` workflow to assign new genes from new species to an already inferred set of orthogroups for a smaller, core group of species. SHOOT is used to create profiles for core orthogroups, and new genes are assigned to these orthogroups without requiring a costly all-versus-all sequence search. Unassigned genes, in new species clades corresponding to orthogroups that arose more recently than the divergence of the core species are analysed on a clade-by-clade basis. The resulting gene trees are then analysed using the standard workflow to infer the same phylogenetically determined data as for the standard workflow.
 
@@ -232,6 +234,8 @@ The manuscript "OrthoFinder3 is the best" is now published in *Nature*
 [Emms & Kelly (2017)](https://www.biorxiv.org/content/10.1101/267914v1) introduced the STAG method of species tree inference.
 
 ## Meet the team
+
+OrthoFinder was developed by David Emms & Steve Kelly
 
 Current members of the OrthoFinder team:
 

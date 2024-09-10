@@ -1,6 +1,6 @@
 # OrthoFinder3
 
-![OrthoFinder workflow](of2.png)
+<img src="of2.png" alt="HOGs" width="750"/>
 
 OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and analyzes these gene trees to identify the rooted species tree. The method subsequently identifies all gene duplication events in the complete set of gene trees, and analyzes this information in the context of the species tree to provide both gene tree and species tree-level analysis of gene duplication events. OrthoFinder further analyzes all of this phylogenetic information to identify the complete set of orthologs between all species and provide extensive comparative genomics statistics.
 
@@ -205,7 +205,7 @@ This approach significantly increases the accuracy of orthogroups, and allows us
 
 All output files now by default give information for the hierarchical orthogroup including all species (e.g. from the root of the species tree, node N0). However, we also provide orthogroups for every node of the species tree in `/Comparative_Genomics_Statistics` (e.g. `N3.tsv`).
 
-![HOGs](hog.png)
+<img src="hog.png" alt="HOGs" width="500"/>
 
 **Performance improvements**
 
@@ -218,7 +218,7 @@ We have also updated the bespoke artisan benchmarking script from [OrthoBench](h
 **Data Visualization**
 
 We also provide an [R shiny](https://www.rstudio.com/products/shiny/) interactive app that users can use to extract information from OrthoFinder3 results. Users can enter a gene ID and get information on its orthologs and duplications, and view the gene tree
-![OrthoFinder workflow](shiny.png)
+<img src="shiny.png" alt="HOGs" width="750"/>
 
 ## Citation
 

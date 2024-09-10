@@ -218,6 +218,7 @@ We have also updated the bespoke artisan benchmarking script from [OrthoBench](h
 **Data Visualization**
 
 We also provide an [R shiny](https://www.rstudio.com/products/shiny/) interactive app that users can use to extract information from OrthoFinder3 results. Users can enter a gene ID and get information on its orthologs and duplications, and view the gene tree
+
 <img src="shiny.png" alt="HOGs" width="750"/>
 
 ## Citation

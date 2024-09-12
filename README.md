@@ -64,7 +64,8 @@ OrthoFinder3 provides a new workflow to assign new genes from new species to an 
 
 ![OrthoFinder3 workflow](of3.png)
 
-We provide a script ``core_maker.py`` to automatically pick a good set of phylogenetically diverse core proteomes from a directory. For more details on how our method works, see [here](https://www.linkedin.com/in/jonathan-holmes-ab2794294/?originalSubdomain=uk)
+We provide a script ``core_maker.py`` to automatically pick a good set of phylogenetically diverse core proteomes from a directory of proteomes.
+For more details on the method, see [here](https://www.linkedin.com/in/jonathan-holmes-ab2794294/?originalSubdomain=uk)
 
 ```python
 python core_maker.py -f <dir1> -o <prefix>
@@ -72,13 +73,19 @@ python core_maker.py -f <dir1> -o <prefix>
 
 This script will output a folder `<prefix>_core` with the core proteomes, and a folder `<prefix>_additional`  with the additional proteomes
 
+If you already have a species tree, you can still use this script to assign core and additional proteomes
+
+```python
+python core_maker.py -f <dir1> -o <prefix> -I <species_tree>
+```
+
 You can then run OrthoFinder3 on the core proteomes
 
 ```python
 orthofinder [options] -f <dir_core>
 ```
 
-... and then add the additional proteomes
+Next, you can add the additional proteomes
 
 ```python
 orthofinder [options] --assign <dir_additional> --core <dir_core>

@@ -30,6 +30,7 @@ If you are on a mac that has an M1/M2/M3 chip, you might have to adjust your con
 Alternatively, you can also download OrthoFinder3 directly from github
 ```bash
 git clone https://github.com/ortho.git
+## other commands - ask Yi ##
 python OrthoFinder/orthofinder -h
 ```
 
@@ -37,7 +38,7 @@ A docker image is also available [here](https://www.linkedin.com/in/jonathan-hol
 
 **Installing dependencies**
 
-some info on how to do manually install dependencies if you want
+## some info on how to manually install dependencies if you want ##
 
 
 ## Simple Usage

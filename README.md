@@ -10,7 +10,7 @@ OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and a
 - [Advanced Usage](#Advanced-Usage)
 - [Command line Options](#Command-line-Options)
 - [Output files](#Output-files)
-- [What's New?](#What-is-new)
+- [Latest additions](#What-is-new)
 - [Citation](#Citation)
 
 Tutorials and further documentation can be found on our [github.io](https://davidemms.github.io/)
@@ -198,7 +198,7 @@ Full details on the output files and directories can be found [here](https://uk.
 - A FASTA file for each orthogroup giving the amino acid sequences for each gene in the orthogroup.
 
 
-## What is new?
+## Latest addition
 OrthoFinder3 has several major changes comapred to OrthoFinder2
 
 **New workflow for scalability**
@@ -248,6 +248,6 @@ OrthoFinder was developed by David Emms & Steve Kelly
 
 Current members of the OrthoFinder team:
 
-OrthoYi, OrthoJohnnie, OrthoLaurie
+Yi Liu, Jonathan Holmes, Laurie Belcher
 
 

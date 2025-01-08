@@ -198,7 +198,7 @@ Full details on the output files and directories can be found [here](https://uk.
 - A FASTA file for each orthogroup giving the amino acid sequences for each gene in the orthogroup.
 
 
-## Latest addition
+## Latest additions
 The current version of OrthoFinder has several major changes comapred to OrthoFinder version 2 (Emms & Kelly 2019)
 
 **New workflow for scalability**

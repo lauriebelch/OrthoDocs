@@ -10,7 +10,7 @@ OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and a
 - [Advanced Usage](#Advanced-Usage)
 - [Command line Options](#Command-line-Options)
 - [Output files](#Output-files)
-- [Latest additions](#What-is-new)
+- [Latest additions](#Latest-additions)
 - [Citation](#Citation)
 
 Tutorials and further documentation can be found on our [github.io](https://davidemms.github.io/)

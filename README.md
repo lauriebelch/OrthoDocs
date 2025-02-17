@@ -13,9 +13,9 @@ OrthoFinder identifies orthogroups, infers gene trees for all orthogroups, and a
 - [Latest additions](#Latest-additions)
 - [Citation](#Citation)
 
-Tutorials and further documentation can be found on our [github.io](https://davidemms.github.io/)
+Tutorials and further documentation can be found on our [website](https://sites.google.com/view/orthofinder3)
 
-A single PDF with all documentation, tutorials, and this README is available [here](http://www.iqtree.org/doc/iqtree-doc.pdf)
+A single PDF with all documentation, tutorials, and this README is available [here](https://github.com/lauriebelch/OrthoDocs/blob/main/of3_v2.pdf)
 
 ## Installation
 
@@ -34,7 +34,7 @@ git clone https://github.com/ortho.git
 python OrthoFinder/orthofinder -h
 ```
 
-A docker image is also available [here](https://www.linkedin.com/in/jonathan-holmes-ab2794294/?originalSubdomain=uk)
+A docker image will also available [here](###linktodocker###)
 
 **Installing dependencies**
 
@@ -43,7 +43,7 @@ A docker image is also available [here](https://www.linkedin.com/in/jonathan-hol
 
 ## Simple Usage
 
-OrthoFinder requires one FASTA format file for each species being analysed. Each file should contain the complete set of protein sequences encoded by gene present in that species genome,  with a single representative protein sequence for each gene.
+OrthoFinder requires one FASTA format file for each species being analysed. Each file should contain the complete set of protein sequences encoded by genes present in that species genome,  with a single representative protein sequence for each gene.
 
 OrthoFinder does not have the ability to distinguish proteins derived from transcript variants from proteins derived from separate genes. If your files have protein sequences derived from multiple transcript variants for each gene then we provide a script `primary_transcripts.py` to extract the longest variant per gene that should be run on your input files prior to running OrthoFinder;
 
@@ -51,7 +51,7 @@ OrthoFinder does not have the ability to distinguish proteins derived from trans
 for f in *fa ; do python primary_transcript.py $f ; done
 ```
 
-Run OrthoFinder2 on FASTA format proteomes in `<dir>`
+Run OrthoFinder3 on FASTA format proteomes in `<dir>`
 
 ```python
 orthofinder [options] -f <dir> -M dendroblast
@@ -64,21 +64,11 @@ If you have large numbers of species to analyse OrthoFinder has a scalable imple
 
 ![OrthoFinder3 workflow](of3.png)
 
-We provide a script ``core_maker.py`` to automatically partition your input dataset into “core” and “additional” species. The core set of species will be the subset that maximally captures the evolutionary uniqueness of the species in the input dataset.
+You will need to partition your input dataset into “core” and “additional” species. 
 
-For more details on the method, see [here](https://www.linkedin.com/in/jonathan-holmes-ab2794294/?originalSubdomain=uk)
+The core set of species should be the subset that maximally captures the evolutionary uniqueness of the species in the input dataset.
 
-```python
-python core_maker.py -f <dir1> -o <prefix>
-```
-
-This script will output a folder `<prefix>_core` with the core species, and a folder `<prefix>_additional`  with the additional species
-
-If you already have a species tree, you can still use this script to assign core and additional proteomes
-
-```python
-python core_maker.py -f <dir1> -o <prefix> -I <species_tree>
-```
+You need to make a folder `core` with the core species, and a folder `additional`  with the additional species
 
 You can then run OrthoFinder3 on the core species
 
@@ -93,9 +83,6 @@ orthofinder [options] --assign <dir_additional> --core <dir_core>
 ```
 
 **Note that this alternative way of running OrthoFinder requires that the core species set is run using the multiple sequence alignment option. You cannot add additional species to OrthoFinder results that were run with the `-M dendroblast` option, which was the default for OrthoFinder2**
-
-(Maybe some more commands for things that people commonly want to do?)
-
 
 ## Command-line options
 
@@ -141,17 +128,11 @@ Command-line options for OrthoFinder
 | Parameter | Description                                                                 |
 |-----------|-----------------------------------------------------------------------------|
 | `-op`     | Stop after preparing input files for BLAST.                                 |
-| `-og`     | Stop after inferring orthogroups.                                           |
-| `-os`     | Stop after writing sequence files for orthogroups (requires `-M msa`).      |
-| `-oa`     | Stop after inferring alignments for orthogroups (requires `-M msa`).        |
-| `-ot`     | Stop after inferring gene trees for orthogroups.                            |
 
 **Workflow restart options**
 | Parameter  | Description                                                  |
 |------------|--------------------------------------------------------------|
 | `-b <dir>` | Start OrthoFinder from pre-computed BLAST results in `<dir>`. |
-| `-fg <dir>`| Start OrthoFinder from pre-computed orthogroups in `<dir>`.   |
-| `-ft <dir>`| Start OrthoFinder from pre-computed gene trees in `<dir>`.    |
 
 **Other options**
 | Parameter        | Description                                                               |
@@ -170,7 +151,7 @@ Command-line options for OrthoFinder
 
 A standard OrthoFinder run produces a set of files describing the orthogroups, orthologs, gene trees, resolve gene trees, the rooted species tree, gene duplication events, and comparative genomic statistics for the set of species being analysed. These files are located in an intuitive directory structure.
 
-Full details on the output files and directories can be found [here](https://uk.linkedin.com/in/jonathan-holmes-ab2794294). The directories that are useful for most users are;
+Full details on the output files and directories can be found [here](https://sites.google.com/view/orthofinder3/guide-to-results-files). The directories that are useful for most users are;
 
 ```/Phylogenetic_Hierarchical_Orthogroups```
 - Each file is a phylogenetic hierarchical orthogroup (HOG) for a different node of the species tree
@@ -217,15 +198,10 @@ This change significantly increases the accuracy of the orthogroups identified b
 
 (4x quicker runtime, 2.5x lower RAM usage, 15% more accurate orthogroups)
 
-**Data Visualization**
-
-We also provide an [R shiny](https://www.rstudio.com/products/shiny/) interactive app that users can use to extract information from OrthoFinder3 results. Users can enter a gene ID and get information on its orthologs and duplications, and view the gene tree
-
-<img src="shiny.png" alt="HOGs" width="750"/>
 
 ## Citation
 
-The manuscript "OrthoFinder is the best" is now published in *Nature*
+The manuscript "OrthoFinder is the best" is now published in *Nature Methods*
 [link here](https://uk.linkedin.com/in/jonathan-holmes-ab2794294).
 
 [Emms & Kelly (2015)](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0721-2]) introduced the orthogroup inference method.

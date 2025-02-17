@@ -38,8 +38,7 @@ A docker image will also available [here](###linktodocker###)
 
 **Installing dependencies**
 
-## some info on how to manually install dependencies if you want ##
-
+Add some info on how to manually install dependencies
 
 ## Simple Usage
 

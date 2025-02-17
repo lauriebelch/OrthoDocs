@@ -63,7 +63,7 @@ If you have large numbers of species to analyse OrthoFinder has a scalable imple
 
 ![OrthoFinder3 workflow](of3.png)
 
-You will need to partition your input dataset into “core” and “additional” species. 
+We reccomend that if you are analysing >32 species, you use the this core/assign method. You will need to partition your input dataset into 16 “core” and the remainder “additional” species. 
 
 The core set of species should be the subset that maximally captures the evolutionary uniqueness of the species in the input dataset.
 

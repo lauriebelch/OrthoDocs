@@ -2,7 +2,7 @@
 
 Welcome to the OrthoFinder documentation site. Explore the tutorial sections below.
 
-You can also [📄 download the full guide as a PDF](old_all.pdf).
+You can also [📄 download the full guide as a PDF](OrthoFinder3_guide.pdf).
 
 ---
 

@@ -1,58 +1,61 @@
+/* Zissou1-inspired GitHub Pages styling */
 
-/* Shrink the sidebar */
+body {
+  background-color: #fdfaf3;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar styling */
 .side-bar {
+  background-color: #3B9AB2; /* blue */
   width: 180px !important;
 }
 
 .main {
   margin-left: 200px !important;
+  background-color: #ffffff;
 }
 
-/* Style the embedded PDF viewer */
-iframe {
-  border: 2px solid #b2dfdb;
-  border-radius: 8px;
-  background-color: #fefefe;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  margin-top: 1em;
-  margin-bottom: 2em;
+/* Headings */
+h1, h2, h3 {
+  color: #E1AF00; /* warm orange-gold */
 }
 
-/* Clean link styles */
+/* Links */
 a {
-  color: #00796b;
+  color: #F21A00; /* strong red */
   font-weight: 600;
   text-decoration: none;
 }
 a:hover {
+  color: #EBCC2A; /* bright yellow */
   text-decoration: underline;
 }
 
-/* Section headers */
-h1, h2, h3 {
-  color: #004d40;
+/* Embedded PDF viewer styling */
+iframe {
+  border: 3px solid #78B7C5; /* light blue */
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 12px rgba(59, 154, 178, 0.3); /* soft blue glow */
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
-/* Background */
-body {
-  background-color: #f9fbe7;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-/* Page container padding */
+/* Page content spacing */
 .main-content {
   padding: 1.5rem 2rem;
 }
 
-/* Customize table style if you ever use tables */
+/* Table styling */
 table {
   border-collapse: collapse;
   width: 100%;
 }
 table th, table td {
-  border: 1px solid #c8e6c9;
+  border: 1px solid #EBCC2A; /* yellow */
   padding: 8px;
 }
 table th {
-  background-color: #e0f2f1;
+  background-color: #78B7C5; /* light blue */
 }

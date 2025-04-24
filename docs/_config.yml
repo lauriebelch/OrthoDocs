@@ -1,15 +1,13 @@
 title: OrthoFinder Tutorials
 remote_theme: just-the-docs/just-the-docs@v0.5.3
 
+# ✨ Hide search bar
 search_enabled: false
 
-# SCSS support — this is how you load your styles
-callouts:
-  note:
-    title: Note
-    color: blue
+# 🎨 Optional theme (choose: light, dark, medium)
+color_scheme: light
 
-# Where to find your custom SCSS
-sass:
-  load_paths:
-    - assets/css
+# 🔗 Add a link in the top-right of the site
+aux_links:
+  "GitHub Repo":
+    - "https://github.com/OrthoFinder/OrthoFinder"

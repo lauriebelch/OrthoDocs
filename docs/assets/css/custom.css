@@ -1,31 +1,57 @@
-/* Shrink sidebar */
+/* Shrink the sidebar */
 .side-bar {
-  width: 180px;
+  width: 180px !important;
 }
 
 .main {
-  margin-left: 200px; /* adjust to match sidebar */
+  margin-left: 200px !important;
 }
 
-/* Embed viewer tweaks */
+/* Style the embedded PDF viewer */
 iframe {
   border: 2px solid #b2dfdb;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  background-color: #fafafa;
+  border-radius: 8px;
+  background-color: #fefefe;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
-/* Link styling */
+/* Clean link styles */
 a {
   color: #00796b;
   font-weight: 600;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-/* Section headings */
-h1, h2 {
-  color: #00695c;
+/* Section headers */
+h1, h2, h3 {
+  color: #004d40;
 }
 
-/* Give the site some light background pop */
+/* Background */
 body {
   background-color: #f9fbe7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Page container padding */
+.main-content {
+  padding: 1.5rem 2rem;
+}
+
+/* Customize table style if you ever use tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table th, table td {
+  border: 1px solid #c8e6c9;
+  padding: 8px;
+}
+table th {
+  background-color: #e0f2f1;
 }

@@ -1,13 +1,19 @@
 title: OrthoFinder Tutorials
 remote_theme: just-the-docs/just-the-docs@v0.5.3
 
-# ✨ Hide search bar
 search_enabled: false
 
-# 🎨 Optional theme (choose: light, dark, medium)
 color_scheme: light
 
-# 🔗 Add a link in the top-right of the site
+nav:
+  - Understanding Orthology: orthology.md
+  - Beginner Tutorial: beginner.md
+  - Getting Input Data: input.md
+  - Guide to Results Files: results.md
+  - Advanced Tutorial: advanced.md
+  - Advanced Usage: usage.md
+  
+# GitHub repo link in header
 aux_links:
   "GitHub Repo":
     - "https://github.com/OrthoFinder/OrthoFinder"

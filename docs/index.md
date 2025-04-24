@@ -2,11 +2,11 @@
 
 Welcome to the OrthoFinder user documentation. Choose a section to begin:
 
-- [Beginner Tutorial](beginner-tutorial.md)
-- [Advanced Tutorial](advanced-tutorial.md)
-- [Understanding Orthology](understanding-orthology.md)
-- [Guide to Results Files](results-guide.md)
-- [Advanced Usage](advanced-usage.md)
-- [Getting Input Data](getting-input-data.md)
+- [Beginner Tutorial](of3_docs_v3_BeginnerTutorial.pdf)
+- [Advanced Tutorial](of3_docs_v3_AdvancedTutorial.pdf)
+- [Understanding Orthology](of3_docs_v3_UnderstandingOrthology.pdf)
+- [Guide to Results Files](of3_docs_v3_GuideToResultsFiles.pdf)
+- [Advanced Usage](of3_docs_v3_AdvancedUsage.pdf)
+- [Getting Input Data](of3_docs_v3_GettingInputData.pdf)
 
 You can also [download the complete PDF](old_all.pdf).

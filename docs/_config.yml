@@ -1,11 +1,19 @@
 title: OrthoFinder Tutorials
 remote_theme: just-the-docs/just-the-docs@v0.5.3
 
-search_enabled: false  # ⛔ Disables search bar
+# Disable the search bar
+search_enabled: false
 
-# Sidebar tweaks
+# Optional link in top-right corner
 aux_links:
   "GitHub Repo":
     - "https://github.com/lauriebelch/OrthoDocs"
 
-# Navigation bar width (CSS tweak below will reduce it)
+# Load custom CSS
+sass:
+  style: compressed
+  load_paths:
+    - assets/css
+
+# Enable a logo if you want (optional)
+# logo: /assets/img/logo.png

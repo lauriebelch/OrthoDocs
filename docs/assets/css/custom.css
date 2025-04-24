@@ -1,0 +1,31 @@
+/* Shrink sidebar */
+.side-bar {
+  width: 180px;
+}
+
+.main {
+  margin-left: 200px; /* adjust to match sidebar */
+}
+
+/* Embed viewer tweaks */
+iframe {
+  border: 2px solid #b2dfdb;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #fafafa;
+}
+
+/* Link styling */
+a {
+  color: #00796b;
+  font-weight: 600;
+}
+
+/* Section headings */
+h1, h2 {
+  color: #00695c;
+}
+
+/* Give the site some light background pop */
+body {
+  background-color: #f9fbe7;
+}
